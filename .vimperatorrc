@@ -1,0 +1,3 @@
+set gui=noaddons,nobookmarks,nomenu,navigation,tabs
+noremap j 5j
+noremap k 5k

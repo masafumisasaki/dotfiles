@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/msasaki/Dropbox/Scripts/Perl'
+let g:netrw_dirhist_2='/home/msasaki/Dropbox/Scripts/Perl/script'
+let g:netrw_dirhist_3='/home/msasaki/Dropbox/Scripts/Perl/lib/Oracle'
+let g:netrw_dirhist_4='/home/msasaki/Dropbox/Scripts/Perl/lib/Oracle/V'
