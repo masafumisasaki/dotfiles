@@ -40,3 +40,5 @@ alias gvim='gvim --remote-tab-silent'
 
 HISTSIZE=50000
 HISTFILESIZE=50000
+
+#TEST
