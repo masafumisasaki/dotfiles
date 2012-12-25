@@ -1,3 +1,74 @@
 set gui=noaddons,nobookmarks,nomenu,navigation,tabs
+
+
+" otsune .vimperatorrc
+" 2.0pre (created: 2008/11/30 19:30:34)
+" Mappings
+
+echo "loading..."
+" minimum css!
+noremap ! :set usermode<CR>
+
+" set mark-a, jump mark-a
+noremap _ ma
+noremap } `a
+
+"
 noremap j 5j
 noremap k 5k
+noremap J <C-d>
+noremap K <C-u>
+
+" select next/previous tab
+noremap <Right> gt
+noremap <Left> gT
+noremap l gt
+noremap h gT
+"noremap <C-l> gt
+"noremap <C-h> gT
+"noremap <C-w>l gt
+"noremap <C-w>h gT
+
+" move current tab left/right
+map <S-Right> :tablast<CR>
+map <S-Left> :tabfirst<CR>
+map <C-L> :tabmove! +1<CR>
+map <C-H> :tabmove! -1<CR>
+
+" ex mode
+cmap <C-d> <Tab>
+cmap <C-n> <Tab>
+cmap <C-p> <S-Tab>
+
+javascript <<EOM
+  toggle_element = function (name){
+    document.getElementById(name).collapsed ^= 1;
+  }
+EOM
+
+" ;A
+javascript <<EOM
+hints.addMode( 'A', 'copy URL and description',
+function (element) util.copyToClipboard('<a href="' + element.href + '">' + element.textContent + '</a>', true),
+function () '//a[@href]'
+);
+EOM
+
+" Options
+highlight Bell display:none
+set verbose=9
+set history=1000
+set complete=sl
+set wildoptions=auto
+set newtab=all
+set focuscontent
+
+"<C-c> でコピーを可能に
+map <C-c> Y
+" 選択文字列のgoogle検索を <C-g> に割り当て
+map <C-g> YP
+
+set defsearch=google
+set suggestengines=google
+"set complete=S
+
